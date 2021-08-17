@@ -1,0 +1,78 @@
+Part 1:
+    Established the SequenceMap class with the big-five
+    using their default values. Additionally, I established
+    a parameterized constructor with two strings, the enzyme
+    acronym and sequence. 
+    I overloaded the bool operator< as well as the << operator
+    for output and future comparisons. 
+    Finally, I added a Merge function which merges one 
+    sequence's enzyme acronyms with another.
+    Additionally, I established a single-paremeter constructor
+    for easier comparisons for future functions.
+
+    Didn't run into many issues with this part, mostly smooth
+    sailing.
+
+Part 2.1:
+    My approach for 2.1 was a little different from the provided
+    pseudocode. I used getline() to parse through each line, and
+    in each line, I parsed through and collcted data for the tree.
+
+    It was initially difficult to parse through, but this was a 
+    relatively easy thing to figure out.
+
+    I wrote an additional script to find the maximum number of 
+    sequences for any one acronym in the input file, and while
+    I found that the maximum number was two for this input, my 
+    algorithm functions with the possibility of infinite sequences 
+    as I loop through each line adding a node in the tree for each
+    sequence.
+
+Part 2.2:
+    2.2 gave me the most trouble. I parsed the database as before
+    and properly constructed a search tree, and established a new
+    global variable numNodes which increments with the addition of
+    a new node. Thus I was able to get the number of nodes very 
+    easily. Average depth was also relatively easy to calculate, I
+    tabulated teh internal path length and divided by n.
+
+    Parts 4 and 5 gave me a great deal of trouble. Not because I 
+    could not parse the tree properly, but rather because my 
+    recursion did not return the proper number of calls. 
+
+    I tried many different approaches. What I ended up landing on
+    (to my dismay, as I had already designed several algorithms to
+    traverse the tree by that point) was essentially a copy of the 
+    algorithm of contains() provided with the AVL class. 
+
+    With this approach, I was able to accurately get the number of 
+    recursive calls, and the number of successful queries.
+
+    For 5, the issue was similar, I was unable to accurately find the
+    number of recursive calls. My solution however, was opposite. I 
+    found the only way to get accurate results (and even then, off by
+    one) was to make a strange meld of my algoritm and the algorithm
+    I had designed prior, based off of contains. In any case, the
+    function works, if off by one.
+
+    As the functions work well, the information output in part 6
+    was accurate, making it the easiest part of part 2.2.
+
+Part 2.3:
+    2.3 was relatively easy, especially after the difficulty of 2.2. 
+    I used the algorithms from rotateWithRightChild() and 
+    rorateWithLeftChild() and spliced them together to implement
+    a double roation. This proved effective, and was relatively
+    easy to implement. 
+
+
+Conclusion:
+    While the level of difficulty in this project was not beyond our
+    capabilities (I refer to the collective 'our' of this class), the
+    project consumed far more time than I expected. This was a mistake
+    I will not make again. I did enjoy the ideas behind this project, 
+    but I did wish it was more freeform. The sturdy and mandatory 
+    adherance to these specific values for returns coupled with the
+    very laid-out structure of this project made it less of a creative
+    solution-making process and more of a catering to whatever would 
+    get the correct value.
