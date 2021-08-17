@@ -1,0 +1,25 @@
+
+
+Leonardo Matone
+
+Part I:
+    Part I was fun to implement and pretty reasonably (and deceptively)
+    quick. It was great to experiment with the structure and it works
+    well in all cases that I tested (both input files, and small tests) 
+    the graph does not include the big 5, instead I catored the 
+    implementation towards the needs of this project.
+
+Part II:
+                PART II FUNCTIONALITY IS NOT COMPLETED!
+
+    I truly gave this my best shot. I spent weeks trying to figure this
+    thing out. The lectures from the professor and the provided slides 
+    were very very confusing, and even on my fourth pass of the textbook
+    I remain confused on the application of Dijkstra with the provided 
+    binary heap. 
+
+    My provided implementation is in my graph file. I desperately hope 
+    that my attempt (which does not function) can recieve some sort of 
+    partial credit. But at this time, with the current state of my 
+    personal affairs plus the immense amount of work I have this week
+    and the coming week, I was unable to finish part II.    
