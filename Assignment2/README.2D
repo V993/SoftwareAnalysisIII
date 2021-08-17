@@ -1,0 +1,49 @@
+Leonardo Matone
+2.23.21
+
+
+Part I:
+    For this part of the assignment, I implemented the big five in points2d.h.
+    First, I established an zero parameter constructor, then the copy constructor, 
+    copy assignment, move constructor, move assignment, and the destructor.
+
+    I also implemented an overload of the << operator, allowing for these points 
+    to be properly output.
+
+    Details of my process are included throughout my file with notes. For the big 
+    five, there was nothing really special in terms of my thought process.
+
+Part II:
+    For the second part of the assignment, I overloaded both the + and [] operators
+    for the class. 
+
+    Overloading the [] operator was relatively simple. I set the operator to return
+    the specified value in the array, and that was essentially it. It runs in O(1) 
+    time, and it's a pretty simple overload.
+
+    Overloading the + operator more complicated, but realtively simple in practice.
+
+        My first approach:
+    I tested each sequence to find the larger sequence, and made my return Points2D
+    equal to the larger sequence. I then proceeded to add the contents of the 
+    smaller sequence to the return sequence in order. When the smaller sequence was
+    expended, there was no need to append the remaining points to the return sequence,
+    as the return sequence was the larger sequence.
+    
+    This resulted in some problems I was unable to solve. The sequences were passed
+    as addresses in the parameters because of their possible size. A side-effect 
+    was that when a larger sequence was determined and mapped to the return sequence,
+    modifications to the return sequence modified the original parameter sequence. 
+    I was unable to solve this issue before submission. 
+
+        My second approach:
+    My second approach is boring and lengthy. I determined which, if any of the 
+    sequences were longer and which shorter. I then added the points together based
+    on the length of the shorter sequence, and made a seperate loop to then fill in 
+    the remainder of the return sequence with the points of the larger sequence. 
+
+    This works well, but it's uninspired and typical. A benefit of the design is that 
+    it accounts for the possibility that both sequences are of different lengths, and
+    that they are the same length. If they are the same length, the second loop will 
+    simply not run, as largest = smallest.
+    
