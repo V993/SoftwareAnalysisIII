@@ -1,0 +1,50 @@
+Leonardo Matone
+4.12.21
+
+Part I:
+    Hashing with linear and quadratic probing was relatively simple compared to 
+    the remainder of the assignment. Quadratic was essentially all implemented, 
+    and linear probing was very very easy to implement with quadratic provided.
+    The program responds to 'quadratic' and 'linear' flags efficiently and 
+    numbers for collisions reflect the differing algorithms. Both successfully
+    construct an accurate hash table from the input file, and both successfully
+    query the hash table to test if a word is in the table.
+Part II:
+    Double hashing was more complicated, but also quickly resolved. I computed
+    the ith probe in the provided FindPos() function with a helper secondHash()
+    function which returns an integer computed by the formula in the textbook.
+    Outputs using the 'double' flag are responsive to the value of R, which by 
+    default I set to 97, the largest prime I could find after the default table
+    size. I used 97 to improve efficiency, I found that I had a smaller number
+    of collisions with a larger value of R. 
+Part III:
+    Implementing the spell checker was the most difficult part of this
+    assignment. Simultaneously, it was the most fun. I greatly enjoyed playing
+    around with it to get the my desired output. I implemented four cases for
+    improperly spelled words, one additional case which was not required. I
+    used helper functions for each case to scrub through each invalid input
+    word and return a vector of possible suggestions to make the word valid.
+    I passed the dictionary to each function by reference to improve efficiency
+    and utilized O(n^2) time in each algorithm because the length of each word,
+    which was the value of n, was known to be small and therefore the time 
+    would not be heavily impacted by a longer algorithm. 
+
+    Thus, I simply parsed through the input file, extracted each word taking 
+    care to eliminate trailing punctuation and set all of the strings to 
+    lowerfcase, and tested each word to see if it was inside of the dictionary
+    hash table. If it wasn't, I tested the word with my three cases to find a
+    possible replacement. If such a replacement existed, I added it to a vector
+    of strings, and returned the full vector to be output in the caller.
+
+    I utilized a HashTableDouble to construct my dictionary from an input text
+    file, as I wanted to use a more efficient table and have the capacity to
+    modify R values if I wished. I implemented a method of changing the R value
+    as was included in Parts I & II, but removed it prior to submission to be 
+    safe.
+
+    A quick word on my additional case. I implemented a function similar to 
+    case A which would nondeterministically replace characters in the input
+    word, as I saw that words in document1.txt like 'inheritunce' could not be
+    fixed with case A-B. Thus, my case D addressed this discrepancy. To be 
+    safe, I did not include this implementation in any formal matter in my 
+    output. I just wished to comment on cases like 'inheritunce.'
