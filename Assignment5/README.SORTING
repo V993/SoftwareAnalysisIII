@@ -1,0 +1,78 @@
+Leonardo Matone
+4.27.21
+
+QUESTION 1:
+    step I: 
+            Implementations of VerifyOrder and functions to generate sorted
+            and unsorted vectors were relatively easy to implement. I used
+            a definite loop to iterate through the input vector and used the
+            specified comparator to determine if the order was correct. My
+            implementation is versatile, if the vector is empty it will return
+            true, and if not empty it will search through the vector.
+
+            For GenerateRandomVector and GenerateSortedVector I used another
+            definite loop to fill a new vector with random values and ordered 
+            values respectively. For random values I used rand() to assign
+            new values to each index, and for ordered values I used the index
+            itself as a value. Thus a query for an ordered vector of 1000 
+            contains the numbers 1-1000 in the specified order. Using the
+            parameter comparator, I was able to set the order relatively easily
+            with a conditional in my loop.
+
+            In error testing I found that this implementation would return
+            an incorrect value for random vectors over a certain size. The 
+            cause of this issue was the possibility of duplicates. The
+            rand() function I utilized to setup random vectors will return
+            numbers that appear random, but in practice have repeats. This 
+            led to duplicates in my vectors, and the comparator was unable
+            to process them in my verification testing. Thus I added a new 
+            condition to test if the values were equal, and if so the 
+            algorithm would not provide a false output.
+
+            Finally, I implemented a function to tabulate the duration 
+            provided a stard and end time. The function was essentially 
+            provided from the start, so my implementation was quick.
+
+    step II: 
+            Modifying heapsort, quicksort, and mergesort was relatively 
+            simple. It took some time to write my driver code to properly
+            test this aspect of the assignment, and this took the bulk of 
+            my time. The remainder of my work was in replacing less-than 
+            comparisons with my input comparator, which was relatively
+            easy but very lengthy to properly implement. 
+
+            My tests run perfectly in the expected time allotments for
+            all three algorithms. I used random and sorted methods to 
+            test. 
+
+    step III:
+            Testing worked as expected. I did not want to write all of my
+            code and test it after implementation, so I was testing 
+            throughout. The tests specified run as expected, as well as 
+            all other cases. All three algorithms were tested on all possible
+            inputs.
+        
+QUESTION 2: 
+
+    Implmentation of quicksort algorithms was also fairly quick, but took me 
+    far longer. My approach is very small, but my little amount of work hides
+    many failed attempts. I managed to get proper output as expected through
+    meticulous tests and many many failures in my trials. 
+
+    Median was already implemented.
+
+    Middle was relatively simple, finding the middle at least, was very easy.
+    My solution finds the middle and swaps with the rightmost position.
+
+    First was even quicker, I decided against using a helper function for the 
+    recursion. Instead, I provided the pivot value using the leftmost (start) 
+    position, and swapping this as needed. 
+
+    To implement all three algorithms, I used the materials found in the 
+    textbook. But I found these descriptions to be somewhat inadequate, so my
+    solutions are based off of material I found online. My biggest aidwere 
+    the following sites:
+
+        https://www.geeksforgeeks.org/quick-sort/
+        https://softwareengineering.stackexchange.com/questions/196831/quicksort-and-middle-pivot
+        
